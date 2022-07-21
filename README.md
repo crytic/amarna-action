@@ -55,7 +55,7 @@ jobs:
         continue-on-error: true
         with:
           sarif: results.sarif
-	  target: 'src/'
+          target: 'src/'
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
