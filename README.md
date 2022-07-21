@@ -9,7 +9,6 @@ its [GitHub repository](https://github.com/crytic/amarna).
 
 - [How to use](#how-to-use)
 - [Github Code Scanning integration](#github-code-scanning-integration)
-- [Examples](#examples)
 
 # How to use
 
