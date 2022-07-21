@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: crytic/amarna-action@v0.1.1
+      - uses: crytic/amarna-action@v0.1.0
 ```
 
 ## Options
@@ -49,7 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Amarna
-        uses: crytic/amarna-action@v0.1.1
+        uses: crytic/amarna-action@v0.1.0
         id: amarna
         continue-on-error: true
         with:
