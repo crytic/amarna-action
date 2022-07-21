@@ -1,0 +1,26 @@
+name: 'amarna-action'
+description: 'Runs Amarna, the Cairo static analyzer.'
+inputs:
+  target:
+    description: 'The path of the project that Amarna should analyze, relative to the repo root.'
+    default: .
+    type: string
+  sarif:
+    description: 'If provided, the path of the SARIF file to produce, relative to the repo root.'
+  amarna-args:
+    description: 'Extra arguments to pass to Amarna.'
+  amarna-version:
+    description: 'The version of amarna-analyzer to use. By default, the latest release in PyPI is used.'
+outputs:
+  sarif:
+    description: 'If produced, the path of the SARIF file, relative to the repo root.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.target }}
+    - ${{ inputs.sarif }}
+    - ${{ inputs.amarna-version }}
+branding:
+  icon: 'shield'  
+  color: 'red'
