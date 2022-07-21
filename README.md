@@ -35,7 +35,7 @@ jobs:
 
 # Github Code Scanning integration
 
-The action supports the Github Code Scanning integration, which will push amarna's alerts to the Security tab of the Github project (see [About code scanning](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning)). This integration eases the triaging of findings and improves the continious integration.
+The action supports the Github Code Scanning integration, which will push Amarna's alerts to the Security tab of the Github project (see [About code scanning](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning)). This integration eases the triaging of findings and improves the continious integration.
 
 ## How to use
 
@@ -63,5 +63,6 @@ jobs:
 ```
 
 Here:
-- `continue-on-error: true` is required to let the SARIF upload step runs if amarna finds issues
+- `continue-on-error: true` is required to let the SARIF upload step runs if Amarna finds issues
 - `id: amarna` is the name used in for `steps.amarna.outputs.sarif`
+- `target: 'src/'` means Amarna will analyze the `src/` directory
