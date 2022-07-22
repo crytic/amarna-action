@@ -60,6 +60,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: ${{ steps.amarna.outputs.sarif }}
+          checkout_path: '/github/workspace'
 ```
 
 Here:
