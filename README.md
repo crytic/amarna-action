@@ -48,6 +48,7 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Run Amarna
         uses: crytic/amarna-action@v0.1.1
         id: amarna
